@@ -1,0 +1,32 @@
+TESTE DE LOGIN DO ADMINISTRADOR - GELO
+
+O QUE ESTE PACOTE CONTEM
+- project/gelo/service/LoginAdministradorTest.java
+
+ONDE EXTRAIR
+1. Abra a pasta do projeto Maven GELO (a pasta que contem pom.xml).
+2. Entre em src/test/java.
+3. Extraia o conteudo deste ZIP dentro de src/test/java.
+4. O arquivo deve ficar exatamente em:
+   src/test/java/project/gelo/service/LoginAdministradorTest.java
+
+NAO EXTRAIA DENTRO DE src/test/java/project/gelo/service, pois o ZIP ja contem
+as pastas project/gelo/service.
+
+COMO EXECUTAR
+Na raiz do projeto, onde esta o pom.xml, execute:
+   mvn -Dtest=LoginAdministradorTest test
+
+PARA EXECUTAR TODOS OS TESTES
+   mvn clean test
+
+O QUE O TESTE VALIDA
+- Inicializa o contexto Spring Boot com banco H2 em memoria isolado.
+- Habilita a criacao automatica do administrador inicial.
+- Autentica com admin@gelo.local e Admin123!.
+- Confirma o e-mail e o perfil ADMINISTRADOR no DTO retornado.
+
+OBSERVACAO
+Este teste segue o pacote e as dependencias usados pelo projeto GELO. O codigo
+utiliza a senha padrao de desenvolvimento configurada no application.properties.
+Nao utilize essa credencial padrao em ambientes compartilhados ou de producao.
